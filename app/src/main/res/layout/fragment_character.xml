@@ -1,0 +1,3286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/character_title"
+            android:layout_width="577dp"
+            android:layout_height="317dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/setting_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.pcr_hud.OutlineTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:fontFamily="@font/gyeonggi_medium"
+                    android:gravity="center"
+                    android:text="설정"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    app:textStroke="true"
+                    app:textStrokeColor="#41589c"
+                    app:textStrokeWidth="7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/setting_tab_left_p"
+                        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/setting_tab_line" />
+
+                    <ImageButton
+                        android:id="@+id/btn_advance_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/setting_tab_right"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="572dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:background="@drawable/setting_chara_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollbarDefaultDelayBeforeFade="500000">
+
+                    <!-- android:scrollbarThumbVertical="@drawable/scroll_thumb"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarTrackVertical="@drawable/scroll_track" -->
+
+
+                    <GridLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="5"
+                        android:orientation="horizontal"
+                        android:rowCount="17">
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:paddingTop="3dp"
+                                android:src="@drawable/chara_peco" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="페코린느"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_0"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:paddingTop="3dp"
+                                android:src="@drawable/chara_kokkoro" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="콧코로"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_1"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kyaru" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="캬루"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_2"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_shefi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="셰피"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_3"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_hiyori" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="히요리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_yui" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="유이"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_5"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_lei" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="레이"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_labyristar" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="라비리스타"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_7"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_shizuru" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="시즈루"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_8"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_rino" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="리노"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_9"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_nozomi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="노조미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_10"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_chika" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="치카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_11"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_tsumugi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="츠무기"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_12"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_mimi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_13"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_misogi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미소기"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_14"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kyouka" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="쿄우카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_15"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_misato" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미사토"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_16"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_aoi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아오이"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_17"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_hatsune" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="하츠네"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_18"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_iriya" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="이리야"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_19"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_yori" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="요리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_20"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_akari" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아카리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_21"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_shinobu" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="시노부"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_22"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_miyako" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미야코"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_23"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_june" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="쥰"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_24"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_christina" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="크리스티나"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_25"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_tomo" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="토모"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_26"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_matsuri" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="마츠리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_27"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_saren" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="사렌"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_28"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_suzume" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="스즈메"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_29"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ayane" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아야네"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_30"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kurumi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="쿠루미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_31"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_maho" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="마호"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_32"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_makoto" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="마코토"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_33"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kaori" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="카오리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_34"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kasumi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="카스미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_35"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_mahiru" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="마히루"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_36"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_rima" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="리마"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_37"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_shiori" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="시오리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_38"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_rin" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="린"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_39"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_akino" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아키노"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_40"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_mihuyu" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미후유"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_41"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_yukari" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="유카리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_42"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_tamaki" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="타마키"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_43"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_luka" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="루카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_44"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_mitsuki" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미츠키"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_45"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_eriko" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="에리코"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_46"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_nanaka" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="나나카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_47"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_anna" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="안나"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_48"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_io" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="이오"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_49"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_misaki" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미사키"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_50"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+
+                        <!-- 뭔가 작업의 문제가 생긴것 같다. 이 아래 부터 주석처리를 해야 레이아웃이 보인다..? -->
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_suzuna" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="스즈나"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_51"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_monika" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="모니카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_52"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_yuki" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="유키"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_53"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ninon" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="니논"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_54"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kuuka" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="쿠우카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_55"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ayumi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아유미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_56"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_yuni" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="유니"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_57"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_chieru" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="치에루"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_58"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kuroe" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="클로에"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_59"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_homare" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="호마레"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_60"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kaya" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="카야"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_61"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_inori" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="이노리"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_62"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_drin" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="시부야 린"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_63"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_uzuki" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="우즈키"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_64"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_mio" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="미오"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_65"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_kurejitta" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="크레짓타"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_66"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_karin" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="카린"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_67"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ranpa" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="란파"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_68"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_nea" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="네아"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_69"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_jita" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="지타"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_70"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_arisa" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아리사"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_71"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_muimi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="무이미"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_72"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_an" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="앤"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_73"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ru" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="루"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_74"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_gurea" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="글레어"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_75"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_rem" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="렘"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_76"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ram" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="람"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_77"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_emilia" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="에밀리아"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_78"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginTop="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_neneka" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="네네카"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_79"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_luna" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="루나"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_80"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_bampi" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="밤피"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_81"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="100dp"
+                            android:layout_height="130dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/setting_linear_background"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="2"
+                                android:src="@drawable/chara_ames" />
+
+                            <com.example.pcr_hud.OutlineTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.6"
+                                android:background="@drawable/setting_name_background"
+                                android:fontFamily="@font/gyeonggi_medium"
+                                android:gravity="center"
+                                android:text="아메스"
+                                android:textColor="#3f414d"
+                                android:textSize="12dp"
+                                app:textStroke="true"
+                                app:textStrokeColor="#cdccca"
+                                app:textStrokeWidth="2.5" />
+
+                            <ImageButton
+                                android:id="@+id/character_82"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_weight="0.8"
+                                android:background="@android:color/transparent"
+                                android:scaleType="centerInside"
+                                android:src="@drawable/btn_character" />
+                        </LinearLayout>
+
+
+                    </GridLayout>
+
+                </ScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/cancel_exit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_cancle" />
+
+                    <ImageButton
+                        android:id="@+id/ok_exit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_ok" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#cdccca"
+    tools:context=".PermissionActivity">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+      <com.example.pcr_hud.OutlineTextView
+          android:id="@+id/tx_permission_title"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:fontFamily="@font/gyeonggi_medium"
+          android:paddingTop="30dp"
+          android:paddingLeft="10dp"
+          android:paddingRight="10dp"
+          android:gravity="center"
+          android:text="시스템 권한을 허용해 주세요!"
+          android:textColor="#3f414d"
+          android:textSize="30dp"
+          app:textStroke="true"
+          app:textStrokeColor="#cdccca"
+          app:textStrokeWidth="2.5" />
+
+    </LinearLayout>
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="0dp"
+      android:orientation="vertical"
+      android:layout_weight="8">
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:orientation="horizontal"
+          android:layout_weight="7">
+
+        <ImageView
+            android:id="@+id/img_permission_chracter"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+
+            android:layout_weight="1.5"
+            android:src="@drawable/permission_chara_ames"/>
+
+        <ImageView
+            android:id="@+id/img_permission_image"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_weight="1"
+            android:src="@drawable/check_bright"/>
+      </LinearLayout>
+
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:orientation="vertical"
+          android:layout_weight="3">
+        <com.example.pcr_hud.OutlineTextView
+            android:id="@+id/tx_permission_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/gyeonggi_medium"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:gravity="center"
+            android:text="해당 어플리케이션은 상시 밝기 최대를 위한 \n시스템 권한이 필요합니다.\n\n 밝기 권한 체크 버튼을 누른 후 해당 어플리케이션 권한을 체크 후 뒤로 돌아와 주세요"
+            android:textColor="#3f414d"
+            android:textSize="20dp"
+            app:textStroke="true"
+            app:textStrokeColor="#cdccca"
+            app:textStrokeWidth="2.5" />
+      </LinearLayout>
+  </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <ImageButton
+            android:id="@+id/btn_i_got_it"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn_permission_i_got_it"/>
+
+        <ImageButton
+            android:id="@+id/btn_gps_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn_permission_location"/>
+        <ImageButton
+            android:id="@+id/btn_biright_permission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:background="@android:color/transparent"
+            android:src="@drawable/btn_permission_bright"/>
+
+    </FrameLayout>
+
+  </LinearLayout>
+  </androidx.constraintlayout.widget.ConstraintLayout>

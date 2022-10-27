@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main_background"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/black"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+
+
+        <LinearLayout
+            android:id="@+id/watch_time"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center|center_vertical"
+            android:layout_weight="10">
+
+
+            <ImageView
+                android:id="@+id/num_10h"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+            <ImageView
+                android:id="@+id/num_1h"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="55dp"
+                android:src="@drawable/font_colonm" />
+
+            <ImageView
+                android:id="@+id/num_10min"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+            <ImageView
+                android:id="@+id/num_1min"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+            <ImageView
+                android:layout_width="45dp"
+                android:layout_height="55dp"
+                android:src="@drawable/font_colonm" />
+
+            <ImageView
+                android:id="@+id/num_10s"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+            <ImageView
+                android:id="@+id/num_1s"
+                android:layout_width="38dp"
+                android:layout_height="50dp"
+                android:src="@drawable/font_0" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center|center_vertical">
+
+        <ImageButton
+            android:id="@+id/navi_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_navi_menu" />
+        <ImageButton
+            android:id="@+id/setting_fragment"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:background="@android:color/transparent"
+            android:scaleType="centerInside"
+            android:src="@drawable/btn_setting_menu" />
+        </LinearLayout>
+    </LinearLayout> <!-- 설정 및 시간(예정) 레이아웃 -->
+
+
+    <LinearLayout
+        android:id="@+id/gps_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/gps_num_100"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/font_0" />
+
+            <ImageView
+                android:id="@+id/gps_num_10"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/font_0" />
+
+            <ImageView
+                android:id="@+id/gps_num_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/font_0" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/what"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="top"
+                android:layout_weight="3"
+                android:src="@drawable/peco_0" />
+
+            <ImageView
+                android:id="@+id/api_speed"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/api_what" />
+        </FrameLayout>
+
+    </LinearLayout> <!-- 캐릭터 및 넘버 레이아웃 -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/test_peco"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="페코린느" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/test_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="속도 측정을 한 장소" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/test_kokkoro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="콧코로" />
+    </LinearLayout> <!-- 디버깅용 버튼 (숨겨놨음) -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/test_real_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="속도 측정을 한 장소"
+            android:textSize="20dp" />
+    </LinearLayout> <!-- 실시간 동작 확인용 (숨겨놨음) -->
+
+    <LinearLayout
+        android:id="@+id/date_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/num_1000y"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:id="@+id/num_100y"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:id="@+id/num_10y"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:id="@+id/num_1y"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:src="@drawable/font_y" />
+
+        <ImageView
+            android:id="@+id/num_10m"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:id="@+id/num_1m"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:src="@drawable/font_m" />
+
+        <ImageView
+            android:id="@+id/num_10d"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:id="@+id/num_1d"
+            android:layout_width="38dp"
+            android:layout_height="50dp"
+            android:src="@drawable/font_0" />
+        <ImageView
+            android:layout_width="45dp"
+            android:layout_height="55dp"
+            android:src="@drawable/font_d" />
+    </LinearLayout> <!-- 하단 빈공간 확보용 블랭크 레이아웃 -->
+
+</LinearLayout>

@@ -1,0 +1,927 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF000000">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/advance_title"
+            android:layout_width="577dp"
+            android:layout_height="317dp"
+            android:layout_gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/setting_background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.example.pcr_hud.OutlineTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.9"
+                    android:fontFamily="@font/gyeonggi_medium"
+                    android:gravity="center"
+                    android:text="설정"
+                    android:textColor="#ffffff"
+                    android:textSize="20dp"
+                    app:textStroke="true"
+                    app:textStrokeColor="#41589c"
+                    app:textStrokeWidth="7" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.8"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="2dp">
+
+                    <ImageButton
+                        android:id="@+id/btn_character_fragment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/setting_tab_left" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:adjustViewBounds="true"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/setting_tab_line" />
+
+                    <ImageButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/setting_tab_right_p"
+                        tools:ignore="TouchTargetSizeCheck" />
+
+                </LinearLayout>
+
+
+                <ScrollView
+                    android:layout_width="572dp"
+                    android:layout_height="0dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="5"
+                    android:background="@drawable/setting_chara_background"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp"
+                    android:scrollbarDefaultDelayBeforeFade="500000">
+
+                    <!-- android:scrollbarThumbVertical="@drawable/scroll_thumb"
+                    android:scrollbarSize="2dp"
+                    android:scrollbarTrackVertical="@drawable/scroll_track" -->
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:layout_gravity="center_horizontal"
+                        android:columnCount="1"
+                        android:orientation="horizontal"
+                        android:rowCount="17">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="화면 방향"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="어플리케이션의 화면 방향을 가로모드, 세로모드 로 설정할 수 있습니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+                                <ImageButton
+                                    android:id="@+id/btn_screen_landscape"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="가로모드"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                <ImageButton
+                                    android:id="@+id/btn_screen_portrait"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="세로모드"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="화면 밝기"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="어플리케이션의 화면 밝기를 항상 최대, 시스템 설정 유지를 설정 할 수 있습니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingRight="40dp"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/btn_always_bright"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="항상 최대 밝기"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                <ImageButton
+                                    android:id="@+id/btn_system_bright"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="시스템 설정 유지"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="좌우 반전"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="화면 좌우 반전을 설정 하실 수 있습니다. HUD 모드에서는 좌우반전을 하셔야 합니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingRight="40dp"
+                                android:gravity="right">
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/btn_HUD_mode"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="좌우반전(HUD)"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                <ImageButton
+                                    android:id="@+id/btn_normal_mode"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="일반"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="도로 안내"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="실시간 도로 안내 기능을 설정 할 수 있습니다. 오프라인에선 사용 할 수 없습니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingRight="40dp"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/btn_navi_on"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="도로 안내 활성화"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                    <ImageButton
+                                        android:id="@+id/btn_navi_off"
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/btn_character" />
+
+                                    <com.example.pcr_hud.OutlineTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/gyeonggi_medium"
+                                        android:gravity="center_vertical"
+                                        android:text="도로 안내 비활성화"
+                                        android:textColor="#3f414d"
+                                        android:textSize="15dp"
+                                        app:textStroke="true"
+                                        app:textStrokeColor="#cdccca"
+                                        app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_navi_lock1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                    <ImageButton
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/button_lock"
+                                        android:layout_marginRight="5dp"/>
+
+                                    <com.example.pcr_hud.OutlineTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/gyeonggi_medium"
+                                        android:gravity="center_vertical"
+                                        android:text="도로 안내 활성화"
+                                        android:textColor="#3f414d"
+                                        android:textSize="15dp"
+                                        app:textStroke="true"
+                                        app:textStrokeColor="#cdccca"
+                                        app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_navi_lock2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                    <ImageButton
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/button_lock" />
+
+                                    <com.example.pcr_hud.OutlineTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/gyeonggi_medium"
+                                        android:gravity="center_vertical"
+                                        android:text="도로 안내 비활성화"
+                                        android:textColor="#3f414d"
+                                        android:textSize="15dp"
+                                        app:textStroke="true"
+                                        app:textStrokeColor="#cdccca"
+                                        app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+
+
+
+
+
+
+
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="자가용 설정"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="탑승하신 자가용을 설정 할 수 있습니다.\n실시간 도로안내가 꺼져있거나 오프라인에서만 설정 가능합니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingRight="40dp"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/btn_car"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="자동차/오토바이"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_car_lock"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                    <ImageButton
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/button_lock"
+                                        android:layout_marginRight="5dp"/>
+
+
+                                    <com.example.pcr_hud.OutlineTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/gyeonggi_medium"
+                                        android:gravity="center_vertical"
+                                        android:text="자동차/오토바이"
+                                        android:textColor="#3f414d"
+                                        android:textSize="15dp"
+                                        app:textStroke="true"
+                                        app:textStrokeColor="#cdccca"
+                                        app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                <ImageButton
+                                    android:id="@+id/btn_bicycle"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="자전거"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/btn_bicycle_lock"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+
+                                    <ImageButton
+
+                                        android:layout_width="30dp"
+                                        android:layout_height="30dp"
+                                        android:layout_marginRight="5dp"
+                                        android:background="@android:color/transparent"
+                                        android:scaleType="centerInside"
+                                        android:src="@drawable/button_lock" />
+
+                                    <com.example.pcr_hud.OutlineTextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:fontFamily="@font/gyeonggi_medium"
+                                        android:gravity="center_vertical"
+                                        android:text="자전거"
+                                        android:textColor="#3f414d"
+                                        android:textSize="15dp"
+                                        app:textStroke="true"
+                                        app:textStrokeColor="#cdccca"
+                                        app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:background="@drawable/setting_linear_advance_background"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical">
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:text="세계 설정"
+                                    android:textColor="#4d7cd8"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#fcffff"
+                                    app:textStrokeWidth="2.5" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="left"
+                                    android:layout_marginTop="5dp"
+                                    android:layout_marginLeft="5dp"
+                                    android:text="시계 기능을 설정 하실 수 있습니다.\n"
+                                    android:textColor="#3f414d"
+                                    android:textSize="13dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2" />
+                            </LinearLayout>
+
+                            <FrameLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:paddingRight="40dp"
+                                android:gravity="right">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="190dp"
+                                    android:gravity="right">
+
+                                <ImageButton
+                                    android:id="@+id/btn_watch_on"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character"
+                                    android:layout_marginRight="5dp"/>
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="활성화"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5"
+                                    />
+                                </LinearLayout>
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_marginLeft="340dp"
+                                    android:gravity="left">
+                                <ImageButton
+                                    android:id="@+id/btn_watch_off"
+                                    android:layout_width="30dp"
+                                    android:layout_height="30dp"
+                                    android:layout_marginRight="5dp"
+                                    android:background="@android:color/transparent"
+                                    android:scaleType="centerInside"
+                                    android:src="@drawable/btn_character" />
+
+                                <com.example.pcr_hud.OutlineTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:fontFamily="@font/gyeonggi_medium"
+                                    android:gravity="center_vertical"
+                                    android:text="비활성화"
+                                    android:textColor="#3f414d"
+                                    android:textSize="15dp"
+                                    app:textStroke="true"
+                                    app:textStrokeColor="#cdccca"
+                                    app:textStrokeWidth="2.5" />
+                                </LinearLayout>
+
+
+                            </FrameLayout>
+                        </LinearLayout>
+
+                    </GridLayout>
+
+                </ScrollView>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingTop="2dp"
+                    android:paddingBottom="5dp">
+
+                    <ImageButton
+                        android:id="@+id/cancel_exit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_cancle" />
+
+                    <ImageButton
+                        android:id="@+id/ok_exit_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:adjustViewBounds="true"
+                        android:background="@android:color/transparent"
+                        android:scaleType="centerInside"
+                        android:src="@drawable/btn_ok" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </FrameLayout>
+    </FrameLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
