@@ -506,7 +506,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         .post(body)
                         .addHeader("accept", "application/json")
                         .addHeader("Content-Type", "application/x-www-form-urlencoded")
-                        .addHeader("appKey", "l7xxc799eea58b0b44619f9d95ae52d6af2c")
+                        .addHeader("appKey", "여기에 api 값 입력")
                         .build();
 
                 Response response = null;
@@ -1253,7 +1253,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         .post(body)
                         .addHeader("accept", "application/json")
                         .addHeader("content-type", "application/json")
-                        .addHeader("appKey", "l7xx1317e6cad24d4f0d8048aa7336e5623b")
+                        .addHeader("appKey", "여기에 api 값 입력")
                         .build();
 
                 Response response = null;
@@ -1806,7 +1806,7 @@ public class MainActivity extends AppCompatActivity implements LocationListener,
                         .post(body)
                         .addHeader("accept", "application/json")
                         .addHeader("Content-Type", "application/x-www-form-urlencoded")
-                        .addHeader("appKey", "l7xxc799eea58b0b44619f9d95ae52d6af2c")
+                        .addHeader("appKey", "여기에 api 값 입력")
                         .build();
 
                 Response response = null;

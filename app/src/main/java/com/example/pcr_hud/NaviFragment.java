@@ -343,7 +343,7 @@ public class NaviFragment extends Fragment {
                         .url("https://apis.openapi.sk.com/tmap/pois?version=1&searchKeyword=" + poi_address + "&searchType=all&searchtypCd=R&centerLon=" + search_longtitude + "&centerLat=" + search_lattitude + "&reqCoordType=WGS84GEO&resCoordType=WGS84GEO&radius=0&page=1&count=20&multiPoint=N&poiGroupYn=N")
                         .get()
                         .addHeader("Accept", "application/json")
-                        .addHeader("appKey", "l7xx1317e6cad24d4f0d8048aa7336e5623b")
+                        .addHeader("appKey", "여기에 api 값 입력")
                         .build();
 
                 Response poi_response = null;
